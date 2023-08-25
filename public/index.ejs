@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>View Records</title>
+</head>
+<body class="bg-dark">
+
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col m-auto">
+                    <div class="card">
+                        <div class="card-header">
+                            <h1 class="text-dark text-center">Fetch Data</h1>
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td> User ID </td>
+                                    <td> User Name </td>
+                                    <td> User Desc </td>
+                                    <td> User Phone </td>
+                                    <td> User Email </td>
+                                </tr>
+    
+                                    <% values.data.forEach(element => { %>
+                                    <tr>
+                                        <td><%= element['id'] %></td>
+                                        <td><%= element['name'] %></td>
+                                        <td><%= element['desc'] %></td>
+                                        <td><%= element['phone'] %></td>
+                                        <td><%= element['email'] %></td>
+                                   </tr>                                                                     
+                                    <% }); %>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
